@@ -8,11 +8,12 @@ let apiCall = function (city) {
     .then((response) =>
       response.json().then((data) => {
         console.log(data);
-        document.querySelector("#city").innerHTML = data.name;
-        document.querySelector("#temp").innerHTML = data.main.temp + "°";
+        document.querySelector("#city").innerHTML = " " + data.name;
+        document.querySelector("#temp").innerHTML = " " + data.main.temp + "°";
         document.querySelector("#humidity").innerHTML =
-          data.main.humidity + "%";
-        document.querySelector("#wind").innerHTML = data.wind.speed + "km/h";
+          " " + data.main.humidity + "%";
+        document.querySelector("#wind").innerHTML =
+          " " + data.wind.speed + "km/h";
       })
     )
     .catch((err) => console.log("Erreur : " + err));
